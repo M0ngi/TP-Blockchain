@@ -8,8 +8,8 @@ cargo install just
 export PATH="$PATH:/home/mohamedmongi_saidane/.cargo/bin"
 echo 'export PATH="$PATH:/home/mohamedmongi_saidane/.cargo/bin"' > ~/.bash_aliases
 
-mkdir -p ~/ChainSkills/miner1
-mkdir -p ~/ChainSkills/miner2
+just install-geth
+just create-folders
 
 cd ~/ChainSkills
 cat >genesis.json <<EOL
@@ -50,14 +50,6 @@ geth --datadir ~/ChainSkills/miner1 account new --password ~/password
 
 geth --datadir ~/ChainSkills/miner2 account new --password ~/password
 geth --datadir ~/ChainSkills/miner2 account new --password ~/password
-
-wget https://gethstore.blob.core.windows.net/builds/geth-linux-amd64-1.10.15-8be800ff.tar.gz
-sudo tar -xvf geth-linux-amd64-1.10.15-8be800ff.tar.gz
-
-sudo chmod +x ./geth-linux-amd64-1.10.15-8be800ff/geth
-sudo cp ./geth-linux-amd64-1.10.15-8be800ff/geth /usr/local/bin/
-
-geth version
 
 cat > ~/ChainSkills/miner1/startminer1.sh <<EOL
 #!/bin/bash
