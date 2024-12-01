@@ -3,7 +3,7 @@
 sudo add-apt-repository -y ppa:ethereum/ethereum
 sudo apt-get update
 sudo apt-get install ethereum npm -y
-npm install -g rust-just
+sudo npm install -g rust-just
 
 mkdir -p ~/ChainSkills/miner1
 mkdir -p ~/ChainSkills/miner2
