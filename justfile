@@ -7,7 +7,7 @@ miner1:
     ~/ChainSkills/miner1/startminer1.sh
 
 miner2:
-    ~/ChainSkills/miner1/startminer2.sh
+    ~/ChainSkills/miner2/startminer1.sh
 
 alias cd-m1 := cd-miner1
 cd-miner1:
