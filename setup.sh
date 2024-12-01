@@ -9,7 +9,7 @@ echo 'export PATH="$PATH:/home/mohamedmongi_saidane/.cargo/bin"' > ~/.bash_alias
 mkdir -p ~/ChainSkills/miner1
 mkdir -p ~/ChainSkills/miner2
 
-cd ChainSkills
+cd ~/ChainSkills
 cat >genesis.json <<EOL
 {
 "nonce": "0x0000000000000042",
