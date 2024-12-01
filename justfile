@@ -1,3 +1,8 @@
+set positional-arguments
+
+default:
+  just --list
+  
 miner1:
     ~/ChainSkills/miner1/startminer1.sh
 
