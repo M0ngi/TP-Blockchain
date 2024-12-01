@@ -2,7 +2,8 @@
 
 sudo add-apt-repository -y ppa:ethereum/ethereum
 sudo apt-get update
-sudo apt-get install ethereum -y
+sudo apt-get install ethereum npm -y
+npm install -g rust-just
 
 mkdir -p ~/ChainSkills/miner1
 mkdir -p ~/ChainSkills/miner2
@@ -67,7 +68,7 @@ chmod +x ~/ChainSkills/miner1/startminer1.sh
 cat > ~/ChainSkills/miner2/startminer1.sh <<EOL
 #!/bin/bash
 
-geth --identity "miner2" --networkid 42 --datadir "~/ChainSkills/miner2" --nodiscover --mine --http --http.port "8042" --port "30303" --unlock 0 --password ~/ChainSkills/miner2/password.sec --a>
+geth --identity "miner2" --networkid 42 --datadir "~/ChainSkills/miner2" --nodiscover --mine --http --http.port "8042" --port "30303" --unlock 0 --password ~/ChainSkills/miner2/password.sec --allow-insecure-unlock --ipcpath "~/ChainSkills/miner2/geth.ipc"
 EOL
 
 chmod +x ~/ChainSkills/miner2/startminer1.sh
