@@ -2,8 +2,9 @@
 
 sudo add-apt-repository -y ppa:ethereum/ethereum
 sudo apt-get update
-sudo apt-get install ethereum npm -y
-sudo npm install -g rust-just
+sudo apt-get install ethereum cargo -y
+cargo install just
+echo 'export PATH="$PATH:/home/mohamedmongi_saidane/.cargo/bin"' > ~/.bash_aliases
 
 mkdir -p ~/ChainSkills/miner1
 mkdir -p ~/ChainSkills/miner2
