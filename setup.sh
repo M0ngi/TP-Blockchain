@@ -63,7 +63,7 @@ chmod +x ~/ChainSkills/miner1/startminer1.sh
 cat > ~/ChainSkills/miner2/startminer1.sh <<EOL
 #!/bin/bash
 
-geth --identity "miner2" --networkid 42 --datadir "~/ChainSkills/miner2" --nodiscover --mine --http --http.port "8042" --port "30303" --unlock 0 --password ~/ChainSkills/miner2/password.sec --allow-insecure-unlock --ipcpath "~/ChainSkills/miner2/geth.ipc"
+geth --identity "miner2" --networkid 42 --datadir "~/ChainSkills/miner2" --nodiscover --mine --http --http.port "8043" --port "30304" --unlock 0 --password ~/ChainSkills/miner2/password.sec --allow-insecure-unlock --ipcpath "~/ChainSkills/miner2/geth.ipc"
 EOL
 
 chmod +x ~/ChainSkills/miner2/startminer1.sh
