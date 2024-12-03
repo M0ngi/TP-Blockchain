@@ -51,19 +51,19 @@ geth --datadir ~/ChainSkills/miner1 account new --password ~/password
 geth --datadir ~/ChainSkills/miner2 account new --password ~/password
 geth --datadir ~/ChainSkills/miner2 account new --password ~/password
 
-cat > ~/ChainSkills/miner1/startminer1.sh <<EOL
+cat > ~/ChainSkills/miner1/startminer.sh <<EOL
 #!/bin/bash
 
 geth --identity "miner1" --networkid 42 --datadir "~/ChainSkills/miner1" --nodiscover --mine --http --http.port "8042" --port "30303" --unlock 0 --password ~/ChainSkills/miner1/password.sec --allow-insecure-unlock --ipcpath "~/ChainSkills/miner1/geth.ipc"
 EOL
 
-chmod +x ~/ChainSkills/miner1/startminer1.sh
+chmod +x ~/ChainSkills/miner1/startminer.sh
 
 
-cat > ~/ChainSkills/miner2/startminer1.sh <<EOL
+cat > ~/ChainSkills/miner2/startminer.sh <<EOL
 #!/bin/bash
 
 geth --identity "miner2" --networkid 42 --datadir "~/ChainSkills/miner2" --nodiscover --mine --http --http.port "8043" --port "30304" --unlock 0 --password ~/ChainSkills/miner2/password.sec --allow-insecure-unlock --ipcpath "~/ChainSkills/miner2/geth.ipc"
 EOL
 
-chmod +x ~/ChainSkills/miner2/startminer1.sh
+chmod +x ~/ChainSkills/miner2/startminer.sh

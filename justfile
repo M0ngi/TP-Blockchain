@@ -4,10 +4,10 @@ default:
   just --list
   
 miner1:
-    ~/ChainSkills/miner1/startminer1.sh
+    ~/ChainSkills/miner1/startminer.sh
 
 miner2:
-    ~/ChainSkills/miner2/startminer1.sh
+    ~/ChainSkills/miner2/startminer.sh
 
 alias cd-m1 := cd-miner1
 cd-miner1:
